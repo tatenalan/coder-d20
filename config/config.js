@@ -10,6 +10,6 @@ dotenv.config({
 export default {
     NODE_ENV: NODE_ENV,
     HOST: process.env.HOST || 'localhost',
-    PORT: process.env.PORT || 27017,
+    PORT: process.env.PORT || 8080,
     TYPE_DB: process.env.TYPE_DB || 'mongo'
 }

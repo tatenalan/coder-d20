@@ -16,6 +16,16 @@ class ProductService {
         return await this.productDAO.insertProduct(product)
     }
 
+    async updateProduct(id, product) {
+        ProductService.validateProduct(id, product)
+        return await this.productDAO.updateProduct(id, product)
+    }
+
+    async deleteProduct(product) {
+        ProductService.validateProduct(product)
+        return await this.productDAO.deleteProduct(product)
+    }
+
     static validateProduct(product, require) {
         try {
             Product.validate(product, require)

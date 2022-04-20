@@ -12,6 +12,8 @@ class ProductRouter {
     start() {
         productRouter.get('/:id?', this.productController.getProducts)
         productRouter.post('/', this.productController.insertProduct)
+        productRouter.put('/:id?', this.productController.updateProduct)
+        productRouter.delete('/:id?', this.productController.deleteProduct)
 
         return productRouter
     }

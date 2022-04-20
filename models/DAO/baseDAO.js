@@ -4,6 +4,8 @@ class ProductBaseDAO {
 
     getProducts = async (_id) => { throw new Error(`Method getProducts not implemented`) } 
     insertProduct = async (product) => { throw new Error(`Method insertProducts not implemented`) }
+    updateProduct = async (_id, product) => { throw new Error(`Method updateProduct not implemented`) }
+    deteleProduct = async (_id) => { throw new Error(`Method deteleProduct not implemented`) }
 
     getNextID(products = []) {
         const total = products.length

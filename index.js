@@ -22,13 +22,3 @@ const server = app.listen(config.PORT, () => {
     console.log(`Server listen on ${config.PORT} (${config.NODE_ENV} - ${config.TYPE_DB})`)
 })
 server.on('error', e => console.error(`SERVER ERROR: `, e))
-
-
-axios.get('http://localhost:27017/api/products', {})
-    .then((response) => {
-        console.log(response)
-    })
-    .catch((error) => {
-        console.log(error)
-    })
-    .then(() => { console.log('END')})

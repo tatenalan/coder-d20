@@ -25,6 +25,29 @@ class ProductController {
             console.log(`error to insert product `, e)
         }       
     }
+
+    updateProduct = async(req, res) => {
+        try {
+            const id = req.params.id
+            const product = req.body
+
+            const result = await this.productService.updateProduct(id, product)
+            res.status(201).json(result)
+        } catch (e) {
+            console.log(`error to update the product `, e)
+        }       
+    }
+
+    deleteProduct = async (req, res) => {
+        try {
+            const id = req.params.id
+            const product = await this.productService.deleteProduct(id)
+
+            res.json(product)
+        } catch (e) {
+            console.log(`error to delete the product `, e)
+        }
+    }
 }
 
 export default ProductController
