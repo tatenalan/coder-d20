@@ -6,6 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node test/axios.js",
+    "test-mocha": "mocha test/mocha/product.test.js",
     "start": "node index.js",
     "dev": "set NODE_ENV=develop && node index.js",
     "prod": "set NODE_ENV=production && node index.js"
@@ -25,5 +26,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/tatenalan/coder-d19.git"
+  },
+  "devDependencies": {
+    "mocha": "^9.2.2"
   }
 }

@@ -8,7 +8,7 @@ class ProductController {
 
     getProducts = async(req, res) => {
         try {
-            const id = req.params.id
+            const id = req.params?.id
             const products = await this.productService.getProducts(id)
             res.json(products)
         } catch (e) {
